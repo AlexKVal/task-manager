@@ -1,3 +1,23 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Task Manager Example</h2>
 
-{{outlet}}
+<div class="contaner">
+  <div class="row">
+    {{link-to 'index' 'index'}}
+    {{link-to 'test' 'test'}}
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <label for="name">Task Name</label>
+      {{input value=name class="form-control" id="name"}}
+    </div>
+    <button {{action "runTask"}} type="button" role="button" class="btn btn-default">Run Task</button>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      {{outlet}}
+    </div>
+    <div class="col-xs-6">
+      {{alerts-container}}
+    </div>
+  </div>
+</div>
