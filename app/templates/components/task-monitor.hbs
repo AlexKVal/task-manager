@@ -1,0 +1,5 @@
+<ul>
+  {{#each tasks as |task|}}
+    <li>'{{task.name}}': {{if task.finished "finished!" "loading..."}}</li>
+  {{/each}}
+</ul>
